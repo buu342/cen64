@@ -25,6 +25,7 @@ const struct cen64_options default_cen64_options = {
   NULL, // sram_path
   NULL, // flashram_path
   0,    // is_viewer_present
+  0,    // unfloader_present
   NULL, // controller
 #ifdef _WIN32
   false, // console
@@ -135,6 +136,9 @@ int parse_options(struct cen64_options *options, int argc, const char *argv[]) {
 
     else if (!strcmp(argv[i], "-is-viewer"))
       options->is_viewer_present = 1;
+
+    else if (!strcmp(argv[i], "-unfloader"))
+      options->unfloader_present = 1;
 
     else if (!strcmp(argv[i], "-controller")) {
       int num;

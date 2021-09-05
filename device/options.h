@@ -24,6 +24,7 @@ struct cen64_options {
   const char *sram_path;
   const char *flashram_path;
   int is_viewer_present;
+  int unfloader_present;
 
   struct controller *controller;
 
